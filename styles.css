@@ -53,19 +53,50 @@ ul > li {
 
 /*CSS for page1.html*/
 table {
+    /*
     font-family: arial, sans-serif;
     border-collapse: collapse;
     margin: 0 auto;
     padding-bottom: 25px;
+    */
+    margin: 1em 0;
+    width: 90%;
+    background: #FFF;
+    overflow: hidden;
+    color: #024457;
+   /* border-radius: 10px;*/
+   /* border: 1px solid #167F92;*/
+    margin-left: auto;
+    margin-right: auto;
 }
-td, th {
-    border: 3px solid #dddddd;
+
+td {
+   border: 3px solid #dddddd;
     padding: 8px;
     font-weight: normal;
     text-align: center;
 
 }
 
+th {
+    display: flow;
+    border: 1px solid #FFF;
+   /* background-color: #559245;*/
+    color: #554e4c;
+    padding: 0.5em;
+    text-align: center;
+
+}
+tr {
+    border: 1px solid #d9e4e6;
+    background-color: #f3ece3;
+}
+tr:nth-child(odd) {
+    background-color: #ebf2fa;
+}
+tr:nth-child(even) {
+    background-color: rgba(62, 146, 204, 0.43);
+}
 /* end of css page1.html  */
 
 /*  CSS for page2.html  */
