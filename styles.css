@@ -4,13 +4,7 @@
     padding: 0;
     box-sizing: border-box;
 }
-/* roboto-regular - latin
 
-@font-face {
-    font-family: "Roboto";
-    src: url('fonts/Roboto-Regular.tff');
-}
-*/
 body {
     height: 1000px;
     background-color: #F7F7FF;
@@ -26,7 +20,7 @@ h1 {
 }
 h3 {
     text-align: center;
-    color: whitesmoke;
+    color: #343434;
 }
 
 p {
@@ -49,9 +43,9 @@ ul > li {
 
 
 /*CSS tags for ID's  */
-/*Top level page images    */
 
 /*CSS for page1.html*/
+
 table {
     /*
     font-family: arial, sans-serif;
@@ -59,13 +53,12 @@ table {
     margin: 0 auto;
     padding-bottom: 25px;
     */
-    margin: 1em 0;
+   /*margin: 1em 0;*/
     width: 90%;
-    background: #FFF;
+    background: white;
     overflow: hidden;
-    color: #024457;
-   /* border-radius: 10px;*/
-   /* border: 1px solid #167F92;*/
+    border-radius: 15px;
+
     margin-left: auto;
     margin-right: auto;
 }
@@ -80,7 +73,7 @@ td {
 
 th {
     display: flow;
-    border: 1px solid #FFF;
+    /*border: 1px solid #FFF;*/
    /* background-color: #559245;*/
     color: #554e4c;
     padding: 0.5em;
@@ -88,7 +81,7 @@ th {
 
 }
 tr {
-    border: 1px solid #d9e4e6;
+    /*border: 1px solid red;*/
     background-color: #f3ece3;
 }
 tr:nth-child(odd) {
@@ -104,7 +97,8 @@ tr:nth-child(even) {
     float: left;
     width: 33%;
     height: 300px;
-    background-color: #767e87;
+    background-color: #f2f2f2;
+    color: black;
     display: flow;
 
 }
@@ -116,10 +110,27 @@ tr:nth-child(even) {
     align-items: center;
 }
 
-/* CSS for page3.html   */
-
-
-
+/* CSS for page4.html   */
+.charger-layout{
+    border: none;
+    border-radius: 15px;
+    /*color: #f2f2f2;*/
+    background-color: #f2f2f2;
+    width: 95%;
+    margin-left: 10px;
+    margin-right: auto;}
+.charger-item{
+    display: flex;
+    flex-wrap: initial;
+    flex-direction: column;
+}
+.inner-wrapper{
+    display: flex;
+    padding: 10px 10px;
+}
+.inner-wrapper >img{
+    border-radius: 25px;
+}
 
 /*CSS for toplevel.html photo grid of 4 photos   */
 .photo-grid-container {
@@ -128,7 +139,6 @@ tr:nth-child(even) {
 }
 
 .photo-grid {
-    /*width: 900px;*/
     display: flex;
     /*justify-content: center;*/
     flex-wrap: initial;
