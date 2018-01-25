@@ -4,12 +4,18 @@
     padding: 0;
     box-sizing: border-box;
 }
+/* roboto-regular - latin
 
+@font-face {
+    font-family: "Roboto";
+    src: url('fonts/Roboto-Regular.tff');
+}
+*/
 body {
     height: 1000px;
     background-color: #F7F7FF;
     font-size: 18px; /*Might have to change the font size for the header */
-    font-family: Helvetica, Arial, sans-serif;
+  font-family: Helvetica, Arial, sans-serif;
 }
 
 h1 {
@@ -79,6 +85,25 @@ td, th {
     align-items: center;
 }
 
+/* CSS for page3.html   */
+[data-effeckt-type="fade"] li {
+    transition: opacity 250ms cubic-bezier(0.42, 0, 0.45, 1.08);
+}
+
+[data-effeckt-type="fade"] li.past, [data-effeckt-type="fade"] li.future {
+    opacity: 0;
+}
+.effeckt-caption[data-effeckt-type="cover-fade"] figcaption {
+    top: 0;
+    left: 0;
+    height: 100%;
+    opacity: 0;
+}
+.effeckt-caption[data-effeckt-type="cover-fade"]:hover figcaption,
+.effeckt-caption[data-effeckt-type="cover-fade"]:active figcaption,
+.effeckt-caption[data-effeckt-type="cover-fade"].active figcaption {
+    opacity: 1;
+}
 
 
 
