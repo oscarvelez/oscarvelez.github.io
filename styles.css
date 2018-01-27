@@ -22,6 +22,9 @@ h3 {
     text-align: center;
     color: #343434;
 }
+h4 {
+    text-align: center;
+}
 
 p {
     padding: 0 auto;
@@ -117,12 +120,14 @@ tr:nth-child(even) {
     /*color: #f2f2f2;*/
     background-color: #f2f2f2;
     width: 95%;
-    margin-left: 10px;
-    margin-right: auto;}
+    margin: auto;
+}
+
 .charger-item{
     display: flex;
     flex-wrap: initial;
     flex-direction: column;
+
 }
 .inner-wrapper{
     display: flex;
@@ -130,6 +135,11 @@ tr:nth-child(even) {
 }
 .inner-wrapper >img{
     border-radius: 25px;
+}
+
+.info{
+    text-align: center;
+    padding-left: 15px;
 }
 
 /*CSS for toplevel.html photo grid of 4 photos   */
