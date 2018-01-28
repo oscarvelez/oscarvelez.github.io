@@ -6,7 +6,7 @@
 }
 
 body {
-    height: 1000px;
+    /*height: 1000px;*/
     background-color: #F7F7FF;
     font-size: 18px; /*Might have to change the font size for the header */
   font-family: Helvetica, Arial, sans-serif;
@@ -22,10 +22,11 @@ h3 {
     text-align: center;
     color: #343434;
 }
+/*
 h4 {
     text-align: center;
 }
-
+*/
 p {
     padding: 0 auto;
     padding-left: 10px;
@@ -41,6 +42,9 @@ ul {
 
 ul > li {
     padding: 1px;
+}
+img{
+    border-radius: 10px;
 }
 
 
@@ -129,6 +133,7 @@ tr:nth-child(even) {
     flex-direction: column;
 
 }
+
 .inner-wrapper{
     display: flex;
     padding: 10px 10px;
@@ -140,6 +145,9 @@ tr:nth-child(even) {
 .info{
     text-align: center;
     padding-left: 15px;
+    padding-top: 5%;
+    margin: auto;
+
 }
 
 /*CSS for toplevel.html photo grid of 4 photos   */
@@ -161,6 +169,8 @@ tr:nth-child(even) {
 .photo-grid-item {
     width: 300px;
     height: 300px;
+    margin-left: 10px;
+    margin-right: 10px;
 }
 
 /* align text in the top level page*/
