@@ -29,8 +29,8 @@
       <file leaf-file-name="code.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/code.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="339">
-              <caret line="28" column="20" lean-forward="false" selection-start-line="28" selection-start-column="20" selection-end-line="28" selection-end-column="20" />
+            <state relative-caret-position="414">
+              <caret line="33" column="0" lean-forward="true" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
               <folding>
                 <element signature="n#!!doc" expanded="true" />
               </folding>
@@ -133,12 +133,12 @@
       <updated>1516865663474</updated>
       <workItem from="1516865665901" duration="13720000" />
       <workItem from="1517270848121" duration="42000" />
-      <workItem from="1517956549300" duration="2090000" />
+      <workItem from="1517956549300" duration="2274000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="15852000" />
+    <option name="totallyTimeSpent" value="16036000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="718" height="900" extended-state="0" />
@@ -230,8 +230,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/code.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="339">
-          <caret line="28" column="20" lean-forward="false" selection-start-line="28" selection-start-column="20" selection-end-line="28" selection-end-column="20" />
+        <state relative-caret-position="414">
+          <caret line="33" column="0" lean-forward="true" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
           <folding>
             <element signature="n#!!doc" expanded="true" />
           </folding>
