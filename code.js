@@ -10,7 +10,7 @@ function getStats(txt) {
         nWords: getnWords(txt),
         nLines: getnLines(txt),
         nNonEmptyLines: getnNonEmptyLines(txt),
-        averageWordLength: 3.3,
+        averageWordLength: getaverageWordLength(txt),
         maxLineLength: 33,
         palindromes: ["12321", "kayak", "mom"],
         longestWords: ["xxxxxxxxx", "123444444"],
@@ -24,18 +24,11 @@ function getnChars(txt) {
 
 function getnWords(txt) {
        var words = txt.split(/\W+/);
-    var lastWord = words[words.length - 1]
+    var lastWord = words[words.length - 1];
     if (lastWord === '') {
         words.pop();
     }
-    return words.length;/*
-        let words = txt.replace(/\W/g, " ").match(/\S+/g);
-
-    if(words !== null && txt !== "")
-        return words.length;
-
-    else
-        return 0;     */
+    return words.length;
 
 }
 function getnLines(txt){
@@ -50,6 +43,16 @@ function getnLines(txt){
 }
 
 function getnNonEmptyLines(txt) {
+    var emptyLine = 0;
+    var lines = txt.split(/\r\n?|\n/g);
+    for(var i = 0; i < lines.length; i++){
+       if (lines === ''){
+           emptyLine += 1;
+       }
+    }
+    return (getnLines(txt) - emptyLine);
+    /*should return number of lineds in code minus empty lines */
+
 
 }
 
