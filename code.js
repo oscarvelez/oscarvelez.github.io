@@ -23,15 +23,21 @@ function getnChars(txt) {
 }
 
 function getnWords(txt) {
-    var words = txt.replace(/\W/g, " ").match(/\S+/g);
+       var words = txt.split(/\W+/);
+    var lastWord = words[words.length - 1]
+    if (lastWord === '') {
+        words.pop();
+    }
+    return words.length;/*
+        let words = txt.replace(/\W/g, " ").match(/\S+/g);
 
     if(words !== null && txt !== "")
         return words.length;
 
     else
-        return 0;
-}
+        return 0;     */
 
+}
 function getnLines(txt){
     if (txt !== '') {
         var lines = txt.split(/\r\n|\r|\n/);
