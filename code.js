@@ -24,6 +24,10 @@ function getnChars(txt) {
 
 function getnWords(txt) {
     var words = txt.split(/\W+/);
+    var lastWord = words[words.length - 1]
+    if (lastWord == '') {
+        words.pop();
+    }
     return words.length;
 
 }
@@ -55,5 +59,5 @@ function getPalindromes(txt) {
 }
 
 function getFrequentWords(txt){
-    
+
 }
