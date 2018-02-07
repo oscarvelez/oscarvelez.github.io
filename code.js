@@ -78,16 +78,17 @@ function getaverageWordLength(txt){
 
     //this line gets number of words
     //RETURN should be lengthWords.length
-    var lengthWords = txt.trim().split(/\s+/);
+    var lengthWords = txt.trim().split(/\W+/);
 
 //This piece of code counts parses through all the characters
-    var answer = 0;
+   // var answer = 0;
     var count = 0;
     for (var i = 0; i < words.length; i++) {
 
         count += words[i].length;
     }
-    return (lengthWords.length);
+
+    return (count/lengthWords.length);
 }
 
 function getmaxLineLength(txt) {
