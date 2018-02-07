@@ -45,10 +45,11 @@ function getnLines(txt){
 function getnNonEmptyLines(txt) {
     /*var emptyLine = 0;*/
     var lines = txt.split("\n");
+    var emptyLine = "";
 
     var wordLines = 0; /* lines that are not empty*/
     for(var i = 0; i < lines.length; i++){
-       if (lines !== ''){
+       if (emptyLine !== ''){
            wordLines += 1;
        }
     }
