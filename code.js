@@ -23,7 +23,7 @@ function getnChars(txt) {
 }
 
 function getnWords(txt) {
-       var words = txt.split(/\W+/);
+       var words = txt.trim().split(/\W+/);
     var lastWord = words[words.length - 1];
     if (lastWord === '') {
         words.pop();
@@ -48,7 +48,7 @@ function getnNonEmptyLines(txt) {
     var emptyLine = "";
 
     var wordLines = 0; /* lines that are not empty*/
-    /* code isn't working when it sees '/n' adds an extra space */
+/* remove empty space that makes the code think there's an empty linw\e */
     for(var i = 0; i < lines.length; i++){
         emptyLine = lines[i].replace(/\s+/g,"");
        if (emptyLine !== ""){
@@ -63,7 +63,31 @@ function getnNonEmptyLines(txt) {
 }
 
 function getaverageWordLength(txt){
+    /*number should be divided by words.length */
 
+    var words = txt.trim().split(/\W+/);
+    /*
+    var lastWord = words[words.length - 1];
+    if (lastWord === '') {
+        words.pop();
+    }
+    */
+    /*return words.length;*/
+
+    //var lengthWords = txt.replace(/\s/g,'');
+
+    //this line gets number of words
+    //RETURN should be lengthWords.length
+    var lengthWords = txt.trim().split(/\s+/);
+
+//This piece of code counts parses through all the characters
+    var answer = 0;
+    var count = 0;
+    for (var i = 0; i < words.length; i++) {
+
+        count += words[i].length;
+    }
+    return (lengthWords.length);
 }
 
 function getmaxLineLength(txt) {
