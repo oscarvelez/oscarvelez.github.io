@@ -48,15 +48,15 @@ function getnNonEmptyLines(txt) {
     var emptyLine = "";
 
     var wordLines = 0; /* lines that are not empty*/
+    /* code isn't working when it sees '/n' adds an extra space */
     for(var i = 0; i < lines.length; i++){
-       if (emptyLine !== ''){
-           wordLines += 1;
+        emptyLine = lines[i].replace(/\s+/g,"");
+       if (emptyLine !== ""){
+           wordLines++;
        }
     }
-    if (txt === ''){
-        return 0;
-    }
-    return wordLines;
+
+    return /*(getnLines(txt) - */wordLines;
     /*should return number of lineds in code minus empty lines */
 
 
