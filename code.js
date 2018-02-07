@@ -11,10 +11,10 @@ function getStats(txt) {
         nLines: getnLines(txt),
         nNonEmptyLines: getnNonEmptyLines(txt),
         averageWordLength: getaverageWordLength(txt),
-        maxLineLength: 33,
-        palindromes: ["12321", "kayak", "mom"],
-        longestWords: ["xxxxxxxxx", "123444444"],
-        mostFrequentWords: ["hello(7)", "world(1)"]
+        maxLineLength: getmaxLineLength(txt),
+        palindromes: getPalindromes(txt),
+        longestWords: getLongestWords(txt),
+        mostFrequentWords: getFrequentWords(txt)
     };
 }
 
@@ -95,6 +95,11 @@ function getmaxLineLength(txt) {
 }
 
 function getPalindromes(txt) {
+
+
+}
+
+function getLongestWords(txt){
 
 }
 
