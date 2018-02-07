@@ -11,7 +11,7 @@ function getStats(txt) {
         nLines: getnLines(txt),
         nNonEmptyLines: getnNonEmptyLines(txt),
         averageWordLength: getaverageWordLength(txt),
-        maxLineLength: getmaxLineLength(txt),
+        maxLineLength: getMaxLineLength(txt),
         palindromes: getPalindromes(txt),
         longestWords: getLongestWords(txt),
         mostFrequentWords: getFrequentWords(txt)
@@ -81,7 +81,6 @@ function getaverageWordLength(txt){
     var lengthWords = txt.trim().split(/\W+/);
 
 //This piece of code counts parses through all the characters
-   // var answer = 0;
     var count = 0;
     for (var i = 0; i < words.length; i++) {
 
@@ -91,7 +90,7 @@ function getaverageWordLength(txt){
     return (count/lengthWords.length);
 }
 
-function getmaxLineLength(txt) {
+function getMaxLineLength(txt) {
 
 }
 
