@@ -46,7 +46,7 @@ function getnNonEmptyLines(txt) {
     /*var emptyLine = 0;*/
     var lines = txt.split("\n");
 
-    var wordLines = 0; /* lines that have are not empty*/
+    var wordLines = 0; /* lines that are not empty*/
     for(var i = 0; i < lines.length; i++){
        if (lines !== ''){
            wordLines += 1;
@@ -55,7 +55,7 @@ function getnNonEmptyLines(txt) {
     if (txt === ''){
         return 0;
     }
-    return wordLines;
+    return (getnLines(txt) -  wordLines);
     /*should return number of lineds in code minus empty lines */
 
 
