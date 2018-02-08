@@ -20,11 +20,12 @@ function getStats(txt) {
         mostFrequentWords: getFrequentWords(txt)
     };
 }
-
+//finished
 function getnChars(txt) {
     return txt.length;
 }
 
+//finished
 function getnWords(txt) {
        var words = txt.trim().split(/\W+/);
     var lastWord = words[words.length - 1];
@@ -34,6 +35,8 @@ function getnWords(txt) {
     return words.length;
 
 }
+
+//finished
 function getnLines(txt){
     if (txt !== '') {
         var lines = txt.split(/\r\n|\r|\n/);
@@ -45,6 +48,7 @@ function getnLines(txt){
 
 }
 
+//finished
 function getnNonEmptyLines(txt) {
     /*var emptyLine = 0;*/
     var lines = txt.split("\n");
@@ -65,6 +69,8 @@ function getnNonEmptyLines(txt) {
 
 }
 
+//finished
+//clean up this function pls
 function getaverageWordLength(txt){
     /*number should be divided by words.length */
 
@@ -93,8 +99,25 @@ function getaverageWordLength(txt){
     return (count/lengthWords.length);
 }
 
+//finished
 function getMaxLineLength(txt) {
+/*
+Will contain the length of the longest line. Line length will be computed by counting the number of
+characters in the line, including any trailing white spaces, but excluding the newline character ‘\n’.
+ */
+    var lines = txt.split("\n");
+    var longestLine = 0;
+    var count = 0;
+    for (var i = 0; i < lines.length; i++){
+        count = lines[i].length;
+        //must compare each new line, if new line is longer than the previous, replace that one with the newest one
+        if (count > longestLine){
+            longestLine = count;
 
+        }
+
+    }
+    return longestLine;
 }
 
 function getPalindromes(txt) {
