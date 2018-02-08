@@ -1,6 +1,9 @@
 //
 // this is just a stub for a function you need to implement
 //
+//Code by Oscar Velez Moncada
+//student ID: 10123550
+//
 function getStats(txt) {
 
 
@@ -65,7 +68,7 @@ function getnNonEmptyLines(txt) {
 function getaverageWordLength(txt){
     /*number should be divided by words.length */
 
-    var words = txt.trim().split(/\W+/);
+   var words = txt.trim().split(/\W+/);
     /*
     var lastWord = words[words.length - 1];
     if (lastWord === '') {
