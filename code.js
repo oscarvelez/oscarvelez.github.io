@@ -51,11 +51,11 @@ function getnLines(txt){
 //finished
 //clean function
 function getnNonEmptyLines(txt) {
-    /*var emptyLine = 0;*/
     var lines = txt.split("\n");
     var emptyLine = "";
 
-    var wordLines = 0; /* lines that are not empty*/
+    var wordLines = 0;
+    /* lines that are not empty*/
 /* remove empty space that makes the code think there's an empty line */
     for(var i = 0; i < lines.length; i++){
         emptyLine = lines[i].replace(/\s+/g,"");
@@ -64,10 +64,7 @@ function getnNonEmptyLines(txt) {
        }
     }
 
-    return /*(getnLines(txt) - */wordLines;
-    /*should return number of lines in code minus empty lines */
-
-
+    return wordLines;
 }
 
 //finished
@@ -76,21 +73,12 @@ function getaverageWordLength(txt){
     /*number should be divided by words.length */
 
    var words = txt.trim().split(/\W+/);
-    /*
-    var lastWord = words[words.length - 1];
-    if (lastWord === '') {
-        words.pop();
-    }
-    */
-    /*return words.length;*/
-
-    //var lengthWords = txt.replace(/\s/g,'');
 
     //this line gets number of words
     //RETURN should be lengthWords.length
     var lengthWords = txt.trim().split(/\W+/);
 
-//This piece of code counts parses through all the characters
+//This piece of code counts through all the characters in txt
     var count = 0;
     for (var i = 0; i < words.length; i++) {
 
@@ -132,29 +120,8 @@ function getPalindromes(txt) {
 same forward and backwards. Example: “Kayak, mom, MOM, XXx and 10z01 zz” contains 4 unique
 palindromes: [“kayak”, “mom”, “xxx”, “10x01”]. Palindromes should be reported in the same order they
 appear in the text.
-     */
-    /*
-    var returnList = [];
-
-    var words = txt.toLowerCase().replace(/\W_+/g,'');
-    var original;
-    //will have to parse through every letter, if it's a palindrome then push to returnList
-    //then will also have to put that list in alphabetical order
-
-   //create for loop to parse through every word
-    //create backwards version of each word and check if equal and length > 2
-    for (var i = 0; i < words.length; i++){
-        if (words[i] !== '' && [i].length > 2){
-            original = words[i];
-            var checkPalindrome = words[i].split('').reverse().join('');
-            if (original === checkPalindrome){
-                returnList.push(checkPalindrome)
-            }
-        }
-
-
-    }
-    */
+ */
+    //using split instead of replace gives me errors and wont compile
     var originalWord = txt.toLowerCase().replace(/\W/g," ");
     var words = originalWord.split(" ");
 
@@ -171,6 +138,7 @@ appear in the text.
         }
 return returnList;
 }
+
 
 function getLongestWords(txt){
 
