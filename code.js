@@ -114,6 +114,7 @@ characters in the line, including any trailing white spaces, but excluding the n
 }
 
 function getPalindromes(txt) {
+    
     //getPalindromes is an array of strings
     /*
     Will contain a list of unique palindromes in the text. Palindrome is a word with length > 2, which reads the
@@ -129,18 +130,56 @@ appear in the text.
     var checkPalindrome;
     var returnList = [];
 
-    for (i=0; i < words.length; i++) {
+    for (var i=0; i < words.length; i++) {
         if((words[i] != "") && (words[i].length > 2)) {
             checkPalindrome = words[i].split("").reverse().join("");
             if(words[i] === checkPalindrome)
                 returnList.push(words[i]);
             }
         }
+     /*
+     so currently it's able to put the longest words in the top 10 array, but repeating words get put into there.
+     will try to implement a bubble sorting algorithm to pop out the repeating words
+     wish me luck
+
+      */
+
+     var swap;
+     //for ()
+
+
 return returnList;
 }
 
 
 function getLongestWords(txt){
+   // array of strings
+    /*
+    Will contain the 10 longest words in the text. In case of ties, the secondary sorting criteria should be
+alphabetical sorting. Example: “0, XXX, YYYY, AAAA, BBB” will yield a list: [“aaaa”, “yyyy”, ”bbbb”,
+“xxx”, ”0”].
+     */
+    var wordArray = [];
+    /*
+    var words = txt.replace(/\W/g, "").split("");
+    var lengthCounter = 0; //will keep track of length of word
+*/
+    /*
+    var longestWord = txt.split(/\W+/).sort(function(a, b) { return b.length - a.length; });
+    return longestWord.slice(0,10);
+    THIS SOMEWHAT WORKS BUT GOTTA CHANGE IT
+*/
+   // return wordArray;
+    var words = txt.split(/\W+/);
+   //  var wordLength = 0;
+
+    words.sort(function(a,b) {
+        return b.length - a.length
+    });
+
+
+    return words.slice(0,10);
+
 
 }
 
