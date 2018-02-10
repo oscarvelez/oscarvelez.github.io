@@ -68,24 +68,26 @@ function getnNonEmptyLines(txt) {
 }
 
 //finished
-//clean up this function pls
 function getaverageWordLength(txt){
-    /*number should be divided by words.length */
+    var text = txt.replace(/\W+/g,' ');
+    var words = text.split(" ");
+    var numOfWords = 0;
+    var countChar = 0;
+    if (words === '' && words === null){
+        return 0;
+    }
+    else {
+        for (var i = 0; i < words.length; i++) {
+            if(words[i] != "") {
+                numOfWords += words[i].length;
+                countChar++;
+            }
+        }
 
-   var words = txt.trim().split(/\W+/);
-
-    //this line gets number of words
-    //RETURN should be lengthWords.length
-    var lengthWords = txt.trim().split(/\W+/);
-
-//This piece of code counts through all the characters in txt
-    var count = 0;
-    for (var i = 0; i < words.length; i++) {
-
-        count += words[i].length;
+        return (numOfWords/countChar);
     }
 
-    return (count/lengthWords.length);
+
 }
 
 //finished
@@ -114,7 +116,7 @@ characters in the line, including any trailing white spaces, but excluding the n
 }
 
 function getPalindromes(txt) {
-    
+
     //getPalindromes is an array of strings
     /*
     Will contain a list of unique palindromes in the text. Palindrome is a word with length > 2, which reads the
