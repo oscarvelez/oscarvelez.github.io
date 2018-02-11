@@ -3,6 +3,7 @@
 //
 //Code by Oscar Velez Moncada
 //student ID: 10123550
+//TA: Emmanuel Onu
 //
 function getStats(txt) {
 
@@ -49,7 +50,6 @@ function getnLines(txt){
 }
 
 //finished
-//clean function
 function getnNonEmptyLines(txt) {
     var lines = txt.split("\n");
     var emptyLine = "";
@@ -67,26 +67,23 @@ function getnNonEmptyLines(txt) {
     return wordLines;
 }
 
-//finished
+//somewhat finished, but doesn't work for 'sample text.' or example 1
+//has something to do with the punctuation
 function getaverageWordLength(txt){
-    var text = txt.replace(/\W+/g,' ');
-    var words = text.split(" ");
-    var numOfWords = 0;
-    var countChar = 0;
-    if (words === '' && words === null){
-        return 0;
-    }
-    else {
-        for (var i = 0; i < words.length; i++) {
-            if(words[i] != "") {
-                numOfWords += words[i].length;
-                countChar++;
-            }
-        }
+    //text removes all punctuations and stuff
+    //splits whitespaces
+    //gotta have count of whats being parsed in the for loop
+    //for some reason the if statement isn't working and returns null if string is empty
+    var words = txt.trim().split(/\W+/);
 
-        return (numOfWords/countChar);
+//This piece of code counts parses through all the characters
+    var count = 0;
+    for (var i = 0; i < words.length; i++) {
+
+        count += words[i].length;
     }
 
+    return (count/words.length);
 
 }
 
@@ -108,9 +105,7 @@ characters in the line, including any trailing white spaces, but excluding the n
         //must compare each new line, if new line is longer than the previous, replace that one with the newest one
         if (count > longestLine){
             longestLine = count;
-
         }
-
     }
     return longestLine;
 }
@@ -146,14 +141,11 @@ appear in the text.
 
       */
 
-     var swap;
-     //for ()
-
 
 return returnList;
 }
 
-
+//Function somewhat works except it shows repeating words
 function getLongestWords(txt){
    // array of strings
     /*
@@ -161,27 +153,13 @@ function getLongestWords(txt){
 alphabetical sorting. Example: “0, XXX, YYYY, AAAA, BBB” will yield a list: [“aaaa”, “yyyy”, ”bbbb”,
 “xxx”, ”0”].
      */
-    var wordArray = [];
-    /*
-    var words = txt.replace(/\W/g, "").split("");
-    var lengthCounter = 0; //will keep track of length of word
-*/
-    /*
-    var longestWord = txt.split(/\W+/).sort(function(a, b) { return b.length - a.length; });
-    return longestWord.slice(0,10);
-    THIS SOMEWHAT WORKS BUT GOTTA CHANGE IT
-*/
-   // return wordArray;
     var words = txt.split(/\W+/);
-   //  var wordLength = 0;
 
     words.sort(function(a,b) {
         return b.length - a.length
     });
 
-
     return words.slice(0,10);
-
 
 }
 
