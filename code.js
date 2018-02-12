@@ -162,7 +162,57 @@ alphabetical sorting. Example: “0, XXX, YYYY, AAAA, BBB” will yield a list: 
     return words.slice(0,10);
 
 }
-
+//frequent word function not working
+//giving up
 function getFrequentWords(txt){
+
+    /*
+    Will contain the 10 most frequent words in the text, concatenated with their respective frequencies. Use
+alphabetic sorting to to resolve frequency ties. The results will include the corresponding frequencies
+appended to the actual words surrounded by brackets. Example: the text “The,the,THE,and,AND,and,it,IT”
+should yield a list [“and(3)”, “the(3)”, “it(2)”].
+     */
+
+
+    var noCharacters = txt.toLowerCase().split(/\W+/);
+    //var removeSpace = noCharacters.split('');
+    var sortWords = noCharacters.sort();
+    var wordNumber = []; //will hold the value of number word shows up
+    var frequentList = [];
+
+    var count;
+
+    for (var i = 0; i < sortWords.length; i++){
+        frequentList.push(sortWords[i]);
+        count = 0;
+        //parse through list and compare
+        for (var j = 0; j < frequentList.length; j++){
+            if (frequentList[i] === frequentList[j]) {
+                count++;
+
+            }
+        }
+        wordNumber.push(count);
+
+
+
+        }
+        //sorts from highest to lowest
+    wordNumber.sort(function(a, b){return b-a});
+
+    //sorts alphabetical order
+    frequentList.sort(function(a, b) {
+        return b.count-a.count});
+
+    for (var x = 0; x < frequentList ; x++){
+        frequentList[x] = wordNumber[x]
+
+    }
+    //str1 = frequentList.slice(0,10);
+    //var str2 = ("("+ wordNumber.slice((0,10)) + ")");
+    //var result = str1.concat(str2);
+    return wordNumber.slice(0,10);
+
+
 
 }
