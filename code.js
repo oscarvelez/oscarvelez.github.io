@@ -14,8 +14,8 @@ function getStats(txt) {
         nWords: getnWords(txt),
         nLines: getnLines(txt),
         nNonEmptyLines: getnNonEmptyLines(txt),
-        averageWordLength: getaverageWordLength(txt),
         maxLineLength: getMaxLineLength(txt),
+        averageWordLength: getaverageWordLength(txt),
         palindromes: getPalindromes(txt),
         longestWords: getLongestWords(txt),
         mostFrequentWords: getFrequentWords(txt)
@@ -73,7 +73,6 @@ function getaverageWordLength(txt){
     //text removes all punctuations and stuff
     //splits whitespaces
     //gotta have count of whats being parsed in the for loop
-    //for some reason the if statement isn't working and returns null if string is empty
     var words = txt.trim().split(/\W+/);
 
 //This piece of code counts parses through all the characters
@@ -89,10 +88,7 @@ function getaverageWordLength(txt){
 
 //finished
 function getMaxLineLength(txt) {
-/*
-Will contain the length of the longest line. Line length will be computed by counting the number of
-characters in the line, including any trailing white spaces, but excluding the newline character ‘\n’.
- */
+
     if(txt === ""){
         return 0;
     }
@@ -153,7 +149,7 @@ function getLongestWords(txt){
 alphabetical sorting. Example: “0, XXX, YYYY, AAAA, BBB” will yield a list: [“aaaa”, “yyyy”, ”bbbb”,
 “xxx”, ”0”].
      */
-    var words = txt.split(/\W+/);
+    var words = txt.toLowerCase().split(/\W/g," ");
 
     words.sort(function(a,b) {
         return b.length - a.length
@@ -165,14 +161,6 @@ alphabetical sorting. Example: “0, XXX, YYYY, AAAA, BBB” will yield a list: 
 //frequent word function not working
 //giving up
 function getFrequentWords(txt){
-
-    /*
-    Will contain the 10 most frequent words in the text, concatenated with their respective frequencies. Use
-alphabetic sorting to to resolve frequency ties. The results will include the corresponding frequencies
-appended to the actual words surrounded by brackets. Example: the text “The,the,THE,and,AND,and,it,IT”
-should yield a list [“and(3)”, “the(3)”, “it(2)”].
-     */
-
 
     var noCharacters = txt.toLowerCase().split(/\W+/);
     //var removeSpace = noCharacters.split('');
@@ -212,7 +200,4 @@ should yield a list [“and(3)”, “the(3)”, “it(2)”].
     //var str2 = ("("+ wordNumber.slice((0,10)) + ")");
     //var result = str1.concat(str2);
     return wordNumber.slice(0,10);
-
-
-
 }
